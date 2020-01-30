@@ -37,7 +37,7 @@
         <hr>
         <h1>Calculadora</h1>
 
-        <div id="display"></div>
+        <div id="display">0</div>
 
         Val:1
         <input type="text" id="val1">
@@ -51,12 +51,16 @@
 
 
         <script>
+
+            // função para alterar cor do h1
             function cor()
                 {
                     var el = document.getElementById("titulo");
                     el.style.color = "blue";
 
                 }
+            
+            //altera cor do subtitulo
             function altera()
                 {
                     var el = document.getElementById("texto");
