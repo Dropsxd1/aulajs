@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+    <title>Aula JS</title>
+    <meta charset="utf-8"/>
+
+    <style>
+
+        fieldset {
+            width: 450px;
+        }
+
+        label{
+            width: 100px;
+            display: inline-block;
+        } 
+
+        table {
+            margin-top: 40px;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid;
+            padding: 6px;
+        }
+
+        thead {
+            background-color: silver;
+        }
+    </style>
+
+</head>
+
+<body>
+        <h2>Cadastro de Alunos</h2>
+
+        <fieldset>
+            <label>Nome</label>
+            <input type="text" id="nome"/>
+            <br>
+
+            <label>Email</label>
+            <input type="text" id="email"/>
+            <br>
+
+            <label>Telefone</label>
+            <input type="text" id="telefone"/>
+            <br>
+
+            <label>Sexo</label>
+            <input type="radio" name="sexo" value="M"/>Masculino
+            <input type="radio" name="sexo" value="F"/>Feminino
+            <br>
+
+            <label>Periodo</label>
+            <select>
+                <option value="0">--Selecione--</option>
+                <option value="1">Manhã</option>
+                <option value="2">Tarde</option>
+                <option value="3">Noite</option>
+            </select>
+            <br>
+
+            <button onclick="cadastrar()">Cadastrar</button>
+
+        </fieldset>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Sexo</th>
+                    <th>Periodo</th>
+                </tr>
+            </thead>
+            <tbody id="alunos">
+                <tr>
+                    <td>Pedro Paulo</td>
+                    <td>pedro@paulo.com</td>
+                    <td>11-1234-1234</td>
+                    <td>Masculino</td>
+                    <td>Noturno</td>
+                </tr>
+            </tbody>
+        </table>
+    <script src="alunos.js"></script>
+</body>
+
+</html>
