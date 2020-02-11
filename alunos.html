@@ -1,46 +1,64 @@
 <html>
+    <head>
+        <title>Aula JS</title>
+        <meta charset="utf-8" />   
 
-<head>
+        <style>
+            label{ 
+                width: 100px;
+                display: inline-block;
 
-    <title>Aula JS</title>
-    <meta charset="utf-8"/>
+            }
+            table {
+                margin-top: 40px;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid;
+                padding: 6px;
+            }
+            thead {
+                background-color: silver;
+            }
 
-    <style>
+            #msg-alert {
+                color: red;
+                border: 1px solid;
+                padding: 6px;
+                margin: 6px 0;
+                display: none;
+            }
+            .erro {
+                color: red;
+                border: 1px solid;
+            }
 
-        fieldset {
-            width: 450px;
-        }
+            .btn-del {
+                color: red;
+                cursor: pointer;
+            }
 
-        label{
-            width: 100px;
-            display: inline-block;
-        } 
+            .btn-del:hover {
+                border: 1px solid;
+            }
+        </style>
 
-        table {
-            margin-top: 40px;
-            border: 1px solid;
-            border-collapse: collapse;
-        }
+        <script src="jquery-3.4.1.js"></script>
+        <script src="jquery.mask.min.js"></script>
+        <script src="alunos.js"></script>
 
-        th, td {
-            border: 1px solid;
-            padding: 6px;
-        }
+    </head>
 
-        thead {
-            background-color: silver;
-        }
-    </style>
-    <script src="jquery-3.4.1.js"></script>
-
-</head>
-
-<body>
-        <h2>Cadastro de Alunos</h2>
+    <body>
+        <h1>Cadastro de Alunos</h1>
 
         <fieldset>
+
+            <ul id="msg-alert"></ul>
+
             <label>Nome</label>
-            <input type="text" id="nome"/>
+            <input type="text" id="nome" />
             <br>
 
             <label>Email</label>
@@ -52,13 +70,13 @@
             <br>
 
             <label>Sexo</label>
-            <input type="radio" name="sexo" value="M"/>Masculino
-            <input type="radio" name="sexo" value="F"/>Feminino
+            <input type="radio" name="sexo" value="M" />Masculino
+            <input type="radio" name="sexo" value="F" />Feminico
             <br>
 
             <label>Periodo</label>
             <select id="periodo">
-                <option value="0">--Selecione--</option>
+                <option value="0">-- Selecione --</option>
                 <option value="1">Manhã</option>
                 <option value="2">Tarde</option>
                 <option value="3">Noite</option>
@@ -66,9 +84,7 @@
             <br>
 
             <button id="btn-cadastrar">Cadastrar</button>
-
         </fieldset>
-
 
         <table>
             <thead>
@@ -78,6 +94,7 @@
                     <th>Telefone</th>
                     <th>Sexo</th>
                     <th>Periodo</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody id="alunos">
@@ -87,10 +104,13 @@
                     <td>11-1234-1234</td>
                     <td>Masculino</td>
                     <td>Noturno</td>
+                    <td><span class="btn-del">[X]</span></td>
                 </tr>
+
             </tbody>
         </table>
-    <script src="alunos.js"></script>
-</body>
+
+        
+    </body>
 
 </html>
