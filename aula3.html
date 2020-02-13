@@ -1,37 +1,40 @@
 <html>
     <head>
         <title>Aula JS</title>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
         
 
-        </head>
+    </head>
 
     <body>
-       <h1>Aula 3</h1>
-
-       <fieldset>
-           <input id="cidade" type="text"/>
-           <button onclick="adicionar()">Adicionar</button>
-       </fieldset>
-
-       <h2>Cidades</h2>
-
-       <ul id="lista">
-           <li>Curitiba</li>
-       </ul>
-
-       <br><br>
-       <h2>Nomes</h2>
+        <h1>Aula 3</h1>
 
         <fieldset>
-            <input id="nome" type="text"/>
-            <button onclick="nome()">Maiusculas</button>
-            <button onclick="letra()">Primeira Letra</button>
+            <input type="text" id="texto" />
+            <button onclick="add()">Adicionar</button>
         </fieldset>
 
-        <div id="box"></div>
+        <h2>Cidades</h2>
 
-       <script src="aula3.js"></script>
+        <ul id="lista">
+            <li>Curitiba</li>
+            <li>Curitiba</li>
+        </ul>
+
+        <h2>Nomes</h2>
+            <fieldset>
+                <input type="text" id="nome" />
+                <button onclick="nome()">Maiusculas</button>
+
+                <button onclick="letra()">Primeira letra</button>
+            </fieldset>
+
+            <div id="box">
+
+            </div>
+
+        <script src="aula3.js"></script>
+
     </body>
 
 </html>

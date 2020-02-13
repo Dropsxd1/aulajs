@@ -1,8 +1,8 @@
-function adicionar ()
-{
 
-    var captura = document.getElementById("cidade");
-    var cidade = captura.value;
+function add()
+{
+    var texto = document.getElementById("texto");
+    var cidade = texto.value;
 
     var lista = document.getElementById("lista");
     
@@ -10,35 +10,35 @@ function adicionar ()
 
     if (existe >= 0)
     {
+     
         window.alert("A cidade já foi cadastrada");
-    }   else {
+    } else 
+    {
+     
         //lista.innerHTML = lista.innerHTML + cidade;
-        lista.innerHTML += "<li>"+ cidade +  "</li>";
-    }
+        lista.innerHTML +=  "<li>"+ cidade + "</li>";     
+    }      
 
-    
-
-    captura.value= "";
+    // limpa o input
+    texto.value = "";
 }
 
-function nome ()
+function nome()
 {
     var nome = document.getElementById("nome");
     var box = document.getElementById("box");
 
     box.innerHTML = nome.value.toUpperCase();
+
 }
 
-function letra ()
+function letra()
 {
     var nome = document.getElementById("nome");
     var box = document.getElementById("box");
-    
+
     var letra = nome.value.charAt(0);
     var resto = nome.value.slice(1);
-    
 
     box.innerHTML = letra.toUpperCase() + resto.toLowerCase();
-
-
 }

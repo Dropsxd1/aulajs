@@ -111,8 +111,8 @@ $(document).ready(function(){
             +"</tr>";
 
         $("#alunos").append(linha);
-        $("input[type=text]").val("");
-        $("select").val("0");
+        $("input[type=text]").val();
+        $("select").val("0")
         $("input[name=sexo]").prop("checked", false);
 
     }); //fim do click
@@ -120,17 +120,17 @@ $(document).ready(function(){
     // Mascara para telefone
     $("#telefone").mask("(00)90000-0000");
 
-    
-    //deletar itens da lista
-    $(".btn-del").click(function(){
-        $(this).parent().parent().remove();
-    }); //fim do click
+    // $(".btn-del").click(function(){
+       
+    //     $(this).parent().parent().remove();
 
+    // }); // fim do click
 
-    //monitora a adicao de elementos
     $("#alunos").on("click", ".btn-del", function(){
         $(this).parent().parent().remove();
     });
+
+
 
 }); // fim ready
 
